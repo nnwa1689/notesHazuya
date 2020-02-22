@@ -1,0 +1,17 @@
+{
+    "name": "hazuya/hihazuya",
+    "type": "project",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "nnwa1689",
+            "email": "34399994+nnwa1689@users.noreply.github.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "nesbot/carbon": "^1.33"
+    },
+    "require-dev": {
+    }
+}

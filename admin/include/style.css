@@ -1,0 +1,222 @@
+@charset "utf-8";
+@font-face {
+	font-family: 'NotoSansTC-Regular';
+	font-style: normal;
+	src: url(../../hz_include/themes/def/fonts/NotoSansTC-Regular.otf);
+}
+#leftnav {
+	height: 100%;
+	margin-top: -7px;
+	margin-right: 10px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	background-color: #23282d;
+	position: fixed;
+	text-align: right;
+	width: 150px;
+	border-right-width: medium;
+	border-right-style: solid;
+	border-right-color: #E6E6E6;
+	color: #CCC;
+	clear: both;
+	overflow: auto;
+	padding-right: 10px;
+	padding-bottom: 7px;
+}
+#right {
+	margin-top: auto;
+	margin-right: auto;
+	margin-bottom: auto;
+	margin-left: 185px;
+	position: relative;
+	padding-top: 65px;
+	font-size: 16px;
+}
+#rightcontant{
+	margin-left: auto;
+	margin-right: auto;
+	width: 80%;
+}
+#cpcontant{
+	text-align: center;
+}
+/**********連結屬性******************/
+/*一般*/
+a:link {
+	color: #0099FF;
+	text-decoration: none;
+}
+/*訪問*/
+a:visited {
+	color: #0099FF;
+}
+/*滑鼠經過*/
+a:hover {
+	color: #0000FF;
+}
+/*點選*/
+a:active {
+	color: #0000FF;
+}
+/**********************************/
+#tittle {
+	background-color: #23282d;
+	width: 100%;
+	position: fixed;
+	margin-left: 160px;
+	font-size: 20px;
+	font-weight: bolder;
+	color: #CCC;
+	padding-left: 20px;
+	height: 40px;
+	padding-top: 15px;
+	z-index: 2;
+}
+#right form table {
+	background-color: #FFF;
+	font-size: 18px;
+	border: thin solid #999999;
+}
+td {
+	border: thin solid #E9E9E9;
+}
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	font-family: "微軟正黑體";
+	background-color: #eeeeee;
+	transition:all 0.3s;
+}
+
+#logformout{
+	padding-top: 5%;
+	padding-bottom: 5%;
+	height: 500px;	
+	}
+#logform {
+	background-color: #FFF;
+	color: #585858;
+	height: 600px;
+	width: 400px;
+	position: absolute;
+	text-align: center;
+	box-shadow: #6f7b8a 0px 10px 50px;
+	border-radius: 10px;
+	margin-top: 5%;
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 5%;
+	left: 0px;
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+	overflow: hidden;
+	padding: 5px;
+	
+}
+
+#resformout{
+	padding-top: 5%;
+	padding-bottom: 5%;
+	height: 600px;	
+	}
+#resform {
+	background-color: #FFF;
+	color: #585858;
+	height: 650px;
+	width: 400px;
+	position: absolute;
+	text-align: center;
+	box-shadow: #6f7b8a 0px 10px 50px;
+	border-radius: 10px;
+	margin-top: 5%;
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 5%;
+	left: 0px;
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+	padding: 5px;
+	
+}
+
+
+select {
+	font-family: "微軟正黑體";
+	font-size: 18px;
+}
+
+input {
+	font-size: 18px;
+	font-family: "微軟正黑體";
+}
+
+#logbutton {
+	font-family: "微軟正黑體";
+	font-size: 16px;
+	color: #FFF;
+	background-color: #00A0E9;
+	font-weight: bolder;
+	border: thick solid #00A0E9;
+}
+#button {
+	font-family: "微軟正黑體";
+	font-size: 16px;
+	color: #FFF;
+	background-color: #00A0E9;
+	font-weight: bolder;
+	border: thick solid #00A0E9;
+}
+#username {
+	width: 60%;
+	height: 25px;
+	border: 2px solid #00A0E9;
+}
+#password {
+	width: 60%;
+	height: 25px;
+	border: 2px solid #00A0E9;
+}
+#email {
+	width: 60%;
+	height: 25px;
+	border: 2px solid #00A0E9;
+}
+#msg {
+	text-align: center;
+}
+#recaptcha {
+	width: 400px;
+	text-align: center;
+	padding-right: 45px;
+	padding-left: 45px;
+}
+#editLeft {
+	width: 80%;
+	margin-bottom: 20px;
+	float: left;
+}
+#title {
+	height: 40px;
+	font-family: "微軟正黑體";
+	font-size: 22px;
+	font-weight: bold;
+
+	width: 98%;
+}
+#editRight {
+	background-color: #FFF;
+	width: 195px;
+	height: 480px;
+	padding: 10px;
+	border: thin solid #CCC;
+	position: fixed;
+	right: 1px;
+	overflow: auto;
+}
+#bloginput {
+	font-family: "微軟正黑體";
+	width: 150px;
+}

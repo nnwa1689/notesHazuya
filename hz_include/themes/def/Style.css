@@ -1,0 +1,923 @@
+@charset "utf-8";
+/******************************************
+ Ver 1.3.0
+ Themes		 : Def ->預設主題->CSS樣式表							  
+ ->作	者  	 : Hazuya							  
+ ->最後更新	 : 2018/06/12
+ ******************************************/
+
+/******************************************/
+/* 字體設定*/
+@font-face {
+    font-family: WorkSans-Medium;
+    src: url(fonts/WorkSans-Medium.otf);
+}
+
+@font-face {
+    font-family: WorkSans-Regular;
+    src: url(fonts/WorkSans-Regular.otf);
+}
+
+@font-face {
+    font-family: WorkSans-Light;
+    src: url(fonts/WorkSans-Light.otf);
+}
+
+@font-face {
+    font-family: 'NotoSansTC-Regular';
+    font-style: normal;
+    src: url(fonts/NotoSansTC-Regular.otf);
+}
+
+/******************************************/
+
+/************總體樣式體**************/
+body {
+    font-family: "NotoSansTC-Regular";
+    color: #585858;
+    background-color: #f2f2f2;
+    margin: 0px;
+    font-weight: 500;
+    border-top-style: solid;
+    border-top-width: 4px;
+    border-color: #0096ff;
+}
+
+p {
+    margin: 8px;
+}
+
+hr{
+    border: 0px;
+    border-bottom-style: solid;
+    border-bottom-color: #CCCCCC;
+    border-bottom-width: 2px;
+}
+
+/*td,th{
+	background-color: #F2F2F2;
+	}*/
+/**********************************/
+
+/****************頭部*************/
+/*頭部總體*/
+#top {
+    margin: 0px;
+    font-size: 36px;
+    background-color: #FFFFFF;
+    clip: rect(0px, auto, auto, 0px);
+    width: 100%;
+    text-align: center;
+    height: 70px;
+    line-height: 60px;
+    display: table;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-color: #CCCCCC;
+
+}
+
+/*頭部內容樣式*/
+.top_contant {
+    width: 1040px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-align: left;
+    padding: 0px 0px 20px 0px;
+    height: auto;
+}
+
+/*LOGO*/
+#logo {
+    font-size: 18px;
+    float: left;
+    width: auto;
+    height: 65px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-right: 10px;
+
+}
+
+/*右方使用者功能列*/
+#reslog {
+    float: right;
+    font-size: 16px;
+    width: auto;
+    height: 70px;
+
+}
+
+/**************************************/
+
+/******************主選單******************/
+#manu {
+    /*本屬性預設負責整體導航，選單細節修改下面*/
+    /*若不使用提供的導航，僅以文字輸出導航，細節請修改這裡*/
+    /*系統預設導航僅支持兩層選單輸出*/
+    float: left;
+    font-size: 18px;
+    color: #585858;
+    clip: rect(0px, auto, auto, 0px);
+    width: auto;
+    height: 70px;
+    vertical-align: middle;
+    line-height: 70px;
+    margin-left: 10px;
+    /*border-top-style: solid;
+    border-top-width: 1px;*/
+}
+
+#navContant {
+    width: auto;
+    height: 70px;
+}
+
+/**********************************************************/
+
+/*****************navgative導航*****************/
+ul { /* 取消ul預設的內縮及樣式 */
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+}
+
+ul.drop-down-menu {
+    display: inline-block;
+    font-size: 18px;
+    width: auto;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+ul.drop-down-menu li {
+    position: relative;
+    white-space: nowrap;
+    min-width: 60px;
+    width: auto;
+    margin: 0px 5px 1px 5px;
+}
+
+ul.drop-down-menu > li:first-child { /*最後一個*/
+    /*border-right-width: thin;
+    border-right-style: solid;
+    border-right-color: #CCCCCC;*/
+    margin-left: 0px;
+}
+
+ul.drop-down-menu > li:last-child { /*最後一個*/
+    /*border-right-width: thin;
+    border-right-style: solid;
+    border-right-color: #CCCCCC;*/
+    margin-right: 0px;
+}
+
+ul.drop-down-menu > li {
+    float: left; /* 只有第一層是靠左對齊*/
+}
+
+ul.drop-down-menu a {
+    border-bottom-width: 4px;
+    border-bottom-style: solid;
+    -webkit-transition: border-bottom-color 0.3s;
+    transition: border-bottom-color 0.3s;
+    border-bottom-color: #FFFFFF;
+    color: #999999;
+    display: block;
+    padding: 0 5px;
+    text-decoration: none;
+    line-height: 70px;
+}
+
+ul.drop-down-menu a:hover { /* 滑鼠滑入按鈕變色*/
+    -webkit-transition: border-bottom-color 0.3s;
+    transition: border-bottom-color 0.3s;
+    border-bottom-color: #0096ff;
+    color: #444444;
+}
+
+ul.drop-down-menu li:hover > a { /* 滑鼠移入次選單上層按鈕保持變色*/
+    border-bottom-color: #0096ff;
+    color: #444444;
+}
+
+/*次選單*/
+
+ul.drop-down-menu ul { /*隱藏次選單*/
+
+    opacity: 0; /*設定透明權限0(0:完全透明，1:不透明)*/
+    -webkit-transition: opacity 0.3s; /*執行時間*/
+    transition: opacity 0.3s;
+    left: 99999px; /*將表單移到很外面*/
+    display: none;
+    z-index: 6;
+
+}
+
+ul.drop-down-menu li:hover > ul { /* 滑鼠滑入展開次選單*/
+    left: 0px;
+    padding: 0px;
+    opacity: 1;
+    display: block;
+    border-radius: 0px;
+}
+
+ul.drop-down-menu ul {
+    /*border-bottom: #ccc 1px solid;*/
+    position: absolute;
+    z-index: 999;
+    left: 0px;
+    top: 100%;
+    min-width: 130px;
+    width: auto;
+
+}
+
+ul.drop-down-menu ul a {
+    transition: background 0.3s;
+    background: #FFFFFF;
+    color: #585858;
+    line-height: 35px;
+    font-size: 18px;
+    border-bottom: #ccc 1px solid;
+    border-right: #ccc 1px solid;
+    border-left: #ccc 1px solid;
+    border-radius: 0px;
+    padding: 2px;
+}
+
+ul.drop-down-menu ul a:hover {
+    transition: background-color 0.3s;
+    background-color: #f5f5f5;
+    border-bottom: #ccc 1px solid;
+    border-radius: 0px;
+}
+
+ul.drop-down-menu ul a:first-child {
+    border-top: #ccc 1px solid;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+ul.drop-down-menu ul a:last-child {
+    border-bottom: #ccc 1px solid;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+/***********************************************************************/
+/******麵包導航*****/
+#breadTraiil {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    width: 1040px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#breadlink {
+    color: #0096ff;
+}
+
+#breadlink:hover {
+    color: black;
+}
+
+/*****************/
+/*****輪播********/
+#container {
+    margin-bottom: 20px;
+}
+
+/***************/
+/*********************內容**************/
+/*內容總體*/
+#contant {
+    font-size: 18px;
+    width: 1000px;
+    height: auto;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: #FFF;
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #D6D6D6;
+    border-radius: 5px;
+    font-weight: normal;
+    overflow: hidden;
+}
+
+/*頁面標題樣式*/
+#PageTitle {
+    color: #ffffff;
+    background-color: #0096ff;
+    margin-top: -20px;
+    margin-left: -20px;
+    margin-right: -20px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-right: 20px;
+    padding-left: 30px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-weight: normal;
+    font-size: 25px;
+    border-top-left-radius:5px;
+    border-top-right-radius: 5px;
+}
+/*分欄之頁面左右分欄*/
+.pageLeft{
+    float: left;
+    width: 20%;
+    text-align: center;
+    padding: 10px;
+    height: 100%;
+}
+.pageRight{
+    float: right;
+    width: 75%;
+    height: auto;
+    text-align: left;
+    padding-top: 5px;
+    padding-right: 5px;
+    overflow: hidden;
+}
+/*個人頁面*/
+#personname{
+    padding-top: 10px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 600px;
+    height:220px;
+    border-bottom-width: thin;
+    border-bottom-color: #f2f2f2;
+    border-bottom-style: solid;
+}
+#personnameleft{
+    float: left;
+    width:200px;
+    height: 220px;
+    overflow: hidden;
+
+}
+#personnameright{
+    float: right;
+    text-align: left;
+    padding-left: 10px;
+    width: 390px;
+    height: 220px;
+    overflow: hidden;
+}
+
+/**************************/
+/***部落格文章列表與內容樣式***/
+/*總體*/
+#HomePostList {
+    height: 80px;
+    border-bottom-width: thin;
+    border-bottom-style: solid;
+    border-bottom-color: #F2F2F2;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 5px;
+    padding-bottom: 10px;
+    margin: 5px 5px 0px 5px;
+}
+/*頁數按鈕*/
+#pageBotton{
+    text-align: center;
+    width: 100%;
+}
+
+/*總體-滑鼠經過*/
+/*
+#HomePostList:hover {
+	background-color: #F3F3F3;	
+}
+*/
+
+/*日期顯示樣式*/
+#PostDate {
+    background-color: #f5f5f5;
+    width: 80px;
+    font-size: 16px;
+    text-align: center;
+    color: #585858;
+    float: left;
+    clear: right;
+    height: 75px;
+    border-radius: 5px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+/*回覆數目樣式*/
+#PostReply {
+    background-color: #0096ff;
+    width: 80px;
+    font-size: 16px;
+    text-align: center;
+    color: #FFF;
+    height: 75px;
+    float: left;
+    clear: right;
+    margin-left: 15px;
+    border-radius: 5px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+/*收藏數目樣式*/
+#favpost {
+    background-color: #f5f5f5;
+    width: 80px;
+    font-size: 16px;
+    text-align: center;
+    color: #585858;
+    height: 75px;
+    float: left;
+    clear: right;
+    margin-left: 15px;
+    border-radius: 5px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+/*列表文章標題*/
+#PostTittle {
+    font-size: 22px;
+    padding-left: 285px;
+}
+
+/*文章列表其他訊息*/
+#PostOther {
+    padding-left: 285px;
+    padding-top: 14px;
+}
+
+/*文章列表文章分類*/
+#PostClass {
+    font-size: 16px;
+    background-color: #EDEDED;
+    width: auto;
+    float: left;
+    margin-right: 10px;
+    padding: 2px 5px 2px 5px;
+    border-radius: 3px;
+    color: #585858;
+}
+.postClassLayout{
+    float: left;
+    width: 130px;
+    overflow: hidden;
+}
+
+/*文章列表文章修改者*/
+#PostWriter {
+    font-size: 16px;
+    width: 560px;
+    float: left;
+    padding: 2px 0 2px 0;
+}
+
+/*引用文章*/
+blockquote {
+    padding: 10px 20px;
+    margin: 0 0 20px;
+    font-size: 18px;
+    background-color: #F4F4F4;
+    border-left-width: 5px;
+    border-left-style: solid;
+    border-left-color: #eee;
+}
+
+/*文章內容發表人資訊框*/
+#PostPerson {
+    width: 98%;
+    height: auto;
+}
+
+#perdata {
+    width: 94%;
+    vertical-align: middle;
+    line-height: 32px;
+    height: 32px;
+    font-size: 18px;
+}
+
+/*文章標題*/
+#postTitle {
+    font-size: 25px;
+    border-bottom-width: thin;
+    border-bottom-style: solid;
+    border-bottom-color: #CCCCCC;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+/*文章內容*/
+#postcontant {
+    border-bottom-width: thin;
+    border-bottom-style: solid;
+    border-bottom-color: #CCCCCC;
+    padding-bottom: 15px;
+    font-size: 18px;
+    font-weight: normal;
+}
+
+#like {
+    height: 50px;
+    text-align: center;
+    border-top-width: thin;
+    border-top-style: solid;
+    border-top-color: #CCCCCC;
+    margin-top: 20px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    line-height: 50px;
+
+}
+/*文章作者簽章*/
+#postSignature{
+    background-color: #f5f5f5;
+    height: 140px;
+    width: 800px;
+    padding: 10px 50px 10px 50px;
+    margin: 30px auto 30px auto;
+    border-radius: 5px;
+}
+#postSignatureleft{
+    float: left;
+    width: 135px;
+    height: 140px;
+    overflow: hidden;
+}
+#postSignatureright{
+    float: right;
+    width: 640px;
+    height: 140px;
+}
+
+/*文章回覆人資訊框*/
+#ReplyPerson {
+    width: 100%;
+    height: 35px;
+    padding-top: 5px;
+    border-top-width: thin;
+    border-top-style: solid;
+    border-top-color: #D6D6D6;
+    font-size: 16px;
+}
+
+#ReplyPersonParent {
+    width: 100%;
+    height: 40px;
+    padding-top: 5px;
+    font-size: 16px;
+}
+
+#ReplyPersonAva {
+    height: 32px;
+    width: 32px;
+    float: left;
+}
+
+#Replyperdata {
+    float: right;
+    width: 95%;
+
+}
+#ReplyperdataLeft{
+    float: left;
+    text-align: left;
+    width: 50%;
+    line-height: 40px
+}
+
+#ReplyperdataRight{
+    float: right;
+    text-align: right;
+    width: 45%;
+    line-height: 40px
+}
+
+#ReplyContant {
+    min-height: 40px;
+    margin-top: 0px;
+    margin-bottom: 15px;
+    padding-left: 50px;
+    font-size: 16px;
+}
+
+#ReplyParent {
+    padding: 5px;
+    font-size: 16px;
+    margin-left: 50px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    border-top-width: thin;
+    border-top-style: solid;
+    border-top-color: #D6D6D6;
+
+}
+
+#ReplyParent2 {
+    margin-left: 50px;
+    margin-top: 5px;
+    font-size: 16px;
+    padding: 2px;
+    border-top-style: solid;
+    border-top-width: thin;
+    border-top-color: #D6D6D6;
+
+}
+
+/*顯示幾則回覆樣式*/
+#replynum {
+    border-top-width: thin;
+    border-top-style: solid;
+    border-top-color: #CCCCCC;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+
+/*下一篇文*/
+#nextpost {
+    width: 48%;
+    float: right;
+    text-align: right;
+    font-weight: bold;
+}
+
+#backpost {
+    width: 48%;
+    float: left;
+    text-align: left;
+    font-weight: bold;
+
+}
+
+#oldandnewpost {
+    width: 97%;
+    height: 70px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+/**************************************/
+
+/************公告**********************/
+/***公告列表樣式***/
+/*總體*/
+#HP {
+    height: auto;
+    border-bottom-width: thin;
+    border-bottom-style: solid;
+    border-bottom-color: #F2F2F2;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/*日期顯示樣式*/
+#HPDate {
+    font-weight: bolder;
+    background-color: #0096ff;
+    width: 160px;
+    font-size: 20px;
+    text-align: center;
+    color: #FFF;
+    float: left;
+    clear: right;
+    height: 30px;
+    margin-bottom: 10px;
+}
+
+/*列表文章標題*/
+#HPTittle {
+    padding-top: 0px;
+    font-size: 20px;
+    padding-left: 180px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/*首頁公告標題樣式*/
+#WhatNews {
+    font-size: 25px;
+    font-weight: bolder;
+    color: #0096ff;
+    background-color: #EDEDED;
+    width: 100%;
+    text-align: center;
+    height: 50px;
+    padding-top: 12px;
+}
+
+/************************************/
+
+/*****************底部****************/
+#copyr {
+    margin-right: 0px;
+    background-color: #ffffff;
+    font-style: normal;
+    font-weight: normal;
+    margin-left: 0px;
+    margin-bottom: 0px;
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-color: #CCCCCC;
+}
+
+#footer_contant {
+    font-size: 16px;
+    background-color: #ffffff;
+    width: 1040px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px 0px 20px 0px;
+    overflow: hidden;
+}
+
+#footerLeft {
+    width: 70%;
+    float: left;
+    text-align: left;
+}
+
+#footerRight {
+    width: 30%;
+    float: right;
+    text-align: right;
+}
+
+#footernat {
+    text-align: left;
+    height: 35px;
+}
+
+#footerInformation {
+
+}
+
+#hazuyacopyr {
+    height: 60px;
+}
+
+/*底部導航文字*/
+/*#fn {
+    color: #FFF;
+    transition: color 0.3s;
+}
+
+#fn:visited {
+    color: #FFF;
+}
+
+#fn:hover {
+    color: #a8a8a8;
+    transition: color 0.3s;
+}
+
+#fn:active {
+    color: #a8a8a8;
+}
+*/
+
+/*goto按鈕*/
+#topbottom{
+    position: fixed;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    right: 0px;
+    bottom: 100px;
+    padding: 5px 15px 5px 15px;
+    font-size: 25px;
+    transition: background 0.3s;
+    background: rgba(35, 40, 45, 0.60);
+    color: #FAFCFD;
+    cursor: pointer;
+    z-index: 1000;
+}
+#topbottom:hover{
+    transition: background 0.3s;
+    background: rgba(35, 40, 45, 1);
+
+}
+
+/***************************************/
+
+/**********連結屬性******************/
+/*一般*/
+a:link {
+    color: #585858;
+    transition: all 0.3s;
+    text-decoration: none;
+}
+
+/*訪問*/
+a:visited {
+    color: #585858;
+}
+
+/*滑鼠經過*/
+a:hover {
+    color: #0096ff;
+    transition: all 0.3s;
+}
+
+/*點選*/
+a:active {
+    color: #0096ff;
+}
+
+/**********************************/
+
+/**********OTHERS******************/
+/*提示訊息*/
+#msg {
+    background-color: #F2F2F2;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/*SearchInput*/
+#q {
+    width: 85%;
+}
+
+/*站內信表格*/
+#mes td, th {
+    background-color: #F2F2F2;
+}
+
+/**********************************/
+/**********註冊與登入表單************/
+#logformout{
+    padding-top: 5%;
+    padding-bottom: 5%;
+    height: 500px;
+}
+#logform {
+    background-color: #FFF;
+    color: #585858;
+    height: 600px;
+    width: 400px;
+    position: absolute;
+    text-align: center;
+    box-shadow: #6f7b8a 0px 10px 50px;
+    border-radius: 10px;
+    margin-top: 5%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 5%;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    overflow: hidden;
+    padding: 5px;
+
+}
+
+#resformout{
+    padding-top: 5%;
+    padding-bottom: 5%;
+    height: 600px;
+}
+#resform {
+    background-color: #FFF;
+    color: #585858;
+    height: 650px;
+    width: 400px;
+    position: absolute;
+    text-align: center;
+    box-shadow: #6f7b8a 0px 10px 50px;
+    border-radius: 10px;
+    margin-top: 5%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 5%;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    padding: 5px;
+
+}
+#recaptcha {
+    width: 400px;
+    text-align: center;
+    padding-right: 45px;
+    padding-left: 45px;
+}
+
+/*********************************/
