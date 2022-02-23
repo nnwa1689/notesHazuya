@@ -2,8 +2,8 @@
 <html lang="zh-tw">
     <?php
     include_once('hz_include/ReCaptcha/src/autoload.php');
-    $siteKey = '6LfDakIUAAAAAB2htHJvZLPkjlTFr5reRyZJpdLJ';
-    $secret = '6LfDakIUAAAAADshIbvvpDgb2k8bXGzGXkekLgbN';
+    $siteKey = '';
+    $secret = '';
     // 語言 https://developers.google.com/recaptcha/docs/language
     $lang = 'zh-TW';
     // 初始化變數為空值
@@ -141,7 +141,7 @@
                 </div>
                 </p>
                 <div id="recaptcha">
-                    <div class="g-recaptcha" data-sitekey="6LfDakIUAAAAAB2htHJvZLPkjlTFr5reRyZJpdLJ"></div>
+                    <div class="g-recaptcha" data-sitekey=""></div>
                 </div>
                 <p>
                     <input name="sub" type="submit" class="btn btn-primary" value="登入"/>
